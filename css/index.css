@@ -1,0 +1,359 @@
+@charset "utf-8";
+*{margin: 0; padding: 0;}
+ul{list-style: none;}
+a{color: #000; text-decoration: none; }
+body{font-style: 16px; color: #000; font-family: 'Pretendard'; font-weight: 400; }
+
+
+.header{position: fixed; background-color: #000;
+    width: 100%; z-index: 99; top: 0;
+    vertical-align: middle; 
+}
+.header .header-wrap{max-width: 1700px; margin: 0 auto; display: flex; justify-content: space-between; padding: 19px 0; vertical-align: middle; align-items: center; }
+.header .logo{width: 95px;}
+.header .logo a img{width: 100%;}
+
+.header .nav{ display: flex; flex-basis: 40%;  justify-content: space-between;}
+.header .nav ul{display: flex;  flex-wrap: wrap; }
+.header .nav ul > li{
+    text-align: center;  
+    position: relative;
+    align-items: center;
+    text-align: center;
+    
+}
+.header .nav ul > li a{text-transform: uppercase; color: #fff; font-family: 'Noto Sans KR'; font-weight: 400;font-size: 18px; }
+
+.header .nav ul li .submenu{
+    position: absolute;
+    /* flex-basis: 100%; */
+    background-color: #fff;
+    width: 243px;
+    top: 54px;
+    right: 50%;
+    transform: translate(50%,0);
+    
+    
+}
+.header .nav ul li .submenu ul{
+    
+    height: 0;
+    overflow: hidden;
+    transition: 0.2s;
+    
+}
+.header .nav ul li .submenu ul li{
+    /* flex-wrap: wrap;  */
+    text-align: center;
+    line-height: 60px; 
+    flex-basis: 100%; 
+}
+.header .nav ul li .submenu ul li a{color: #000; font-size: 18px; font-family: 'Noto Sans KR'; letter-spacing: -1px;}
+
+.header .nav ul li:hover .submenu ul{height: 100%; }
+.header .nav ul li .submenu ul li:hover a{font-weight: 500; transition:height ease-out 1s 0s;}
+
+
+
+
+
+/* 메인 */
+.main{width: 100%; position: relative; margin-top: 79.67px; font-size: 0;}
+.main .img{width: 100%;}
+.main .txt{position: absolute; left: 10%; top: 21%;}
+.main .txt img{width: 100%; }
+.main button{
+    position: absolute;
+    border: none;
+    font-family: 'Noto Sans KR';font-style: normal;font-weight: 500;
+    font-size: 18px;
+    background: #ff7118;
+    padding: 10px 19px;
+    transition-duration: 0.2s;
+    cursor: pointer;
+    top: 400px;
+    /* bottom: 50%; */
+    left: 10%;
+    color: #fff;
+}
+.main button::before{
+    content: "»";
+    opacity: 0;
+    margin-left: -15px;
+    transition-duration: 0.2s;
+}
+.main button:hover::before{
+    margin-left: 0px;
+    margin-right: 6px;
+    opacity: 1;
+}
+.main button:hover{
+    border: solid 1px #ff7118;
+    color: #ff7118;
+    background-color: #191919;
+}
+
+
+/* 차 */
+.car{width: 100%; margin-top: 100px; padding-bottom: 100px;}
+.car .car-wrap{max-width: 1200px; margin: 0 auto; text-align: center;}
+.car .car-wrap > span{font-family: 'SCoreDream'; font-weight: 600;  font-size: 50px; text-transform: uppercase; letter-spacing: -1px;}
+.car .car-wrap .mySwiper2 > .swiper-wrapper{ text-align: center;}
+.car .car-wrap .mySwiper2 > .swiper-wrapper .txt{text-align: left;}
+.car .car-wrap .mySwiper2 > .swiper-wrapper .txt > span{
+    font-family: 'SCoreDream'; font-weight: 500;  font-size: 35px; text-transform: uppercase; color:#ff7118;
+    line-height: 1.2;
+    text-shadow: 0px 2px 2.82px rgba(0, 0, 0, 0.35);
+    display: block;
+    margin-top: 40px;
+}
+.car .car-wrap .mySwiper2 > .swiper-wrapper .txt > p:nth-child(2){
+    font-family: 'Noto Sans KR';font-style: normal;font-weight: 400; font-size: 23px; text-transform: uppercase;
+    padding-top: 10px;
+}
+.car .car-wrap .mySwiper2 > .swiper-wrapper .txt > p:nth-child(3){
+    font-family: 'Noto Sans KR';font-style: normal;font-weight: 400; font-size: 16px; text-transform: uppercase; letter-spacing: -1px;
+    line-height: 16px; overflow: hidden; vertical-align: top; padding-top: 8px;
+    
+}
+.car .car-wrap .mySwiper2 > .swiper-wrapper .txt > p:nth-child(3) em{
+    font-style: normal; padding: 0 6px; font-size: 13px;  line-height: 13px; vertical-align: top;
+}
+
+.mySwiper{position: relative; padding-bottom: 30px;}
+.mySwiper .swiper-pagination{
+    bottom: 0px;
+}
+.mySwiper .swiper-pagination .swiper-pagination-bullet{background-color: #ff7118;}
+.mySwiper .swiper-slide{
+    opacity: 0.4;
+}
+.mySwiper .swiper-slide-thumb-active {
+    opacity: 1;
+    color:#ff7118;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* 지프 스토리 */
+.story{width: 100%; background-color: #fff; background-image: url(../images/story-bg.png); height: 954px;}
+.story .story-wrap{display: flex; margin: 127px 0; width: 100%;height: 70%; }
+
+.story .left{flex-basis: 30%; text-align: center; width: 100%; height: 100%; }
+.story .left .txt{ width: 100%; padding-top: 220px;}
+
+.story .left p,
+.story .left span{color: #fff;}
+.story .left p em{font-family: 'Pretendard'; font-weight: 300;font-size: 20px; text-transform: uppercase;}
+.story .left span{font-family: 'SCoreDream'; font-weight: 600;  font-size: 50px; text-transform: uppercase; letter-spacing: -1px;}
+.story .left p:nth-child(3){font-family: 'Pretendard'; font-weight: 600;font-size: 20px; text-transform: uppercase; padding-top: 10px;}
+.story .left p:nth-child(4){font-family: 'Pretendard'; font-weight: 400;font-size: 14px; text-transform: uppercase; padding-top: 15px;}
+.story .left p:nth-child(4) em{padding-right: 5px;}
+
+
+.story .left button{
+    border: none;
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    background: #ff7118;
+    padding: 10px 19px;
+    transition-duration: 0.2s;
+    cursor: pointer;
+    text-transform: uppercase;
+    margin-top: 30px;
+    color: #fff;
+}
+.story .left button::before{
+    content: "»";
+    opacity: 0;
+    margin-left: -15px;
+    transition-duration: 0.2s;
+}
+.story .left button:hover::before{
+    margin-left: 0px;
+    margin-right: 6px;
+    opacity: 1;
+}
+.story .left button:hover{
+    border: solid 1px #ff7118;
+    color: #ff7118;
+    background-color: #191919;
+}
+
+
+.story .right{flex-basis: 70%; font-size: 0;}
+.story .right .img{display: flex; justify-content: center;}
+.story .right .img .one{position: relative; z-index: 1;}
+.story .right .img .one:hover::after{
+    content: "";
+    position: absolute;
+    background-image: url(../images/story1-2.png);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    cursor: pointer;
+}
+.story .right .img .two{position: relative; z-index: 1; transform: translateY(15%);}
+.story .right .img .two:hover::after{
+    content: "";
+    position: absolute;
+    background-image: url(../images/story2-2.png);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    cursor: pointer;
+}
+.story .right .img .three{position: relative; z-index: 1;}
+.story .right .img .three:hover::after{
+    content: "";
+    position: absolute;
+    background-image: url(../images/story3-2.png);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    cursor: pointer;
+    transition-duration: 0.8s;
+}
+
+
+
+
+/* 배너 */
+.banner{
+    background-color: #191919; width: 100%; height: 1000px;
+}
+
+/* 매장 검색 */
+.banner .search{
+    background-image: url(../images/banner-shape.png);
+    width: 1920px;
+    height: 382px;
+    width: 100%;
+    /* transform: translateY(-100px); */
+}
+.banner .search .txt{
+    max-width: 1249px; margin: 0 auto; display: flex;
+    /* transform: translateY(150px); */
+    align-items: center;
+    height: 228px;
+    padding: 77px 0;
+    vertical-align: middle;
+}
+.banner .search .txt .left{flex-basis: 30%;}
+.banner .txt span{font-family: 'SCoreDream'; font-weight: 600;  font-size: 50px; text-transform: uppercase; letter-spacing: -1px; color: #fff;}
+
+.banner .search .txt .right{ font-size: 0; flex-basis: 70%; text-align: right; }
+.banner .search .txt .right input{
+    width: 100%;
+    max-width: 525px;
+    height: 47px;
+    border: none;
+    outline: none;
+    transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+    font-size: 18px;
+    font-weight: 500;
+    color: #a4a4a4;
+    margin-right: 15px;
+    padding-left: 25px;
+    position: relative;
+    transform: translateY(-2px);
+}
+/* .banner .search .txt .right button{
+    border: none;
+    outline: none;
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    background: #ff7118;
+    padding: 10px 19px;
+    transition-duration: 0.2s;
+    cursor: pointer;
+    text-transform: uppercase;
+    color: #fff;
+    position: absolute;
+} */
+.banner .txt button{
+    border: none;
+    outline: none;
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    background: #ff7118;
+    padding: 10px 19px;
+    transition-duration: 0.2s;
+    cursor: pointer;
+    text-transform: uppercase;
+    color: #fff;
+    /* position: absolute; */
+}
+
+
+/* jeep wave */
+.banner .wave{
+    background-image: url(../images/banner-shape-2.png);
+    width: 1920px;
+    height: 382px;
+    width: 100%;
+    transform: translateY(-80px);
+}
+.banner .wave .txt{
+    max-width: 1249px; margin: 0 auto; display: flex;
+    /* transform: translateY(150px); */
+    height: 228px;
+    padding: 77px 0;
+    align-items: center;
+    vertical-align: middle;
+}
+.banner .wave .txt .left{flex-basis: 40%; justify-content: center;}
+.banner .wave .txt .left > button{justify-content: center;}
+
+.banner .wave .txt .right{ font-size: 0; flex-basis: 60%; padding-left: 17%;}
+.banner .wave .txt .right > span{line-height: 50px;  }
+.banner .wave .txt .right p{font-size: 36px; font-weight: 500; color: #ff7118; line-height: 36px; text-align: right; }
+
+
+/* 프로모션 */
+.banner .promotion{
+    background-image: url(../images/banner-shape.png);
+    width: 1920px;
+    height: 382px;
+    width: 100%;
+    transform: translateY(-159px);
+}
+.banner .promotion .txt{
+    max-width: 1249px; margin: 0 auto; display: flex;
+    /* transform: translateY(150px); */
+    align-items: center;
+    height: 228px;
+    padding: 77px 0;
+    vertical-align: middle;
+}
+.banner .promotion .txt .left{display: flex; align-items: end; flex-basis: 70%;}
+.banner .promotion .txt .left > p{
+    font-size: 22px;
+    font-family: 'Pretendard';
+    font-weight: 500;
+    color: #fff;
+    padding-bottom: 10px;
+    padding-left: 25px;
+}
+.banner .promotion .txt .right{flex-basis: 30%;  vertical-align: middle;}
+.banner .promotion .txt .right > button{ position: relative; }
